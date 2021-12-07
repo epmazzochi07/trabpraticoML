@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>CLASSIFICAÇÃO DE POKEMONS LENDARIOS</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel= "stylesheet" type= "text/css" href= "../static/css/style.css">
+  
+</head>
+
+<div>
+<body>
+
+ <div class="login">
+
+	<h1>CLASSIFICADOR DE POKEMONS LENDARIOS</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="/predict" method="post" >
+    <input type="text" name="total" placeholder="Digite o valor total do pokemon" required="required" />
+    <input type="text" name="hp" placeholder="Digite o valor de HP do pokemon:" required="required" />
+		<input type="text" name="pa" placeholder="Digite o valor de poder de ataque:" required="required" />
+		<input type="text" name="def" placeholder="Digite o valor de defesa" required="required" />
+    <input type="text" name="as" placeholder="Digite o valor Velocidade de Ataque" required="required" />
+		<input type="text" name="ds" placeholder="Digite o valor Velocidade de Defesa" required="required" />
+		<input type="text" name="vel" placeholder="Digite o valor a velocidade do Pokemon" required="required" />
+    <input type="text" name="ger" placeholder="Digite o valor a o valor da geração do Pokemon" required="required" />
+    <button type="submit" class="btn btn-primary btn-block btn-large">Classificar POKEMONS</button>
+    </form>
+
+   <br>
+   <h2>{{ prediction_text }} </h2>
+   <h3>{{ prediction_result }} </h3>
+  
+  </div>
+
+  
+</body>
+
+</html>
